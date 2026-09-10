@@ -18,8 +18,8 @@
         
       
       
-      <link rel="icon" href="/latest/develop/assets/logo-trackers-black.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <link rel="icon" href="/latest/assets/logo-trackers-black.svg">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="/latest/develop/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="/latest/assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -46,15 +46,15 @@
       
     
     
-      <link rel="stylesheet" href="/latest/develop/assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="/latest/assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="/latest/develop/stylesheets/style.css">
+      <link rel="stylesheet" href="/latest/stylesheets/style.css">
     
-      <link rel="stylesheet" href="/latest/develop/stylesheets/rf.css">
+      <link rel="stylesheet" href="/latest/stylesheets/rf.css">
     
-      <link rel="stylesheet" href="/latest/develop/stylesheets/command_builder.css">
+      <link rel="stylesheet" href="/latest/stylesheets/command_builder.css">
     
-    <script>__md_scope=new URL("/latest/develop",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("/latest",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -98,14 +98,14 @@
 
     <!-- Link to home -->
     <a
-      href="/latest/develop/."
+      href="/latest/."
       title="Trackers"
       class="md-header__button md-logo"
       aria-label="Trackers"
       data-md-component="logo"
     >
       
-  <img src="/latest/develop/assets/logo-trackers-violet.svg" alt="logo">
+  <img src="/latest/assets/logo-trackers-violet.svg" alt="Trackers logo" width="218" height="198">
 
     </a>
 
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis" style="display: flex; align-items: center; gap: 0.5rem;">
             <a
-            href="/latest/develop/."
+            href="/latest/."
             title="Trackers"
             class="md-header__button md-logo"
             aria-label="Trackers"
@@ -134,7 +134,7 @@
             id="item-logo"
             >
             
-  <img src="/latest/develop/assets/logo-trackers-violet.svg" alt="logo">
+  <img src="/latest/assets/logo-trackers-violet.svg" alt="Trackers logo" width="218" height="198">
 
             </a>
             
@@ -194,7 +194,7 @@
 
     <ul class="header-list">
         <li style="align-items: center;" id="resources-list">
-            <label for="dropdown-resources"><span>Resources <img src="https://ka-p.fontawesome.com/releases/v6.6.0/svgs/regular/chevron-down.svg?v=2&token=a463935e93" style="height: 0.5rem;" /></span></label>
+            <label for="dropdown-resources"><span>Resources <svg class="dropdown-chevron" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label>
             <input type="radio" name="dropdown" id="dropdown-resources" style="display: none;" />
             <ul class="resources-sublist sublist">
                 <li><a href="https://blog.roboflow.com">Blog</a></li>
@@ -204,7 +204,7 @@
             </ul>
         </li>
         <li style="align-items: center;" id="products-list">
-            <label for="dropdown-products"><span>Docs <img src="https://ka-p.fontawesome.com/releases/v6.6.0/svgs/regular/chevron-down.svg?v=2&token=a463935e93" style="height: 0.5rem;" /></span></label>
+            <label for="dropdown-products"><span>Docs <svg class="dropdown-chevron" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label>
             <input type="radio" name="dropdown" id="dropdown-products" style="display: none;" />
             <ul class="products-sublist sublist">
                 <li><a href="https://inference.roboflow.com">Inference</a></li>
@@ -215,6 +215,17 @@
             </ul>
         </li>
         <script>
+          const searchDialog = document.querySelector('.md-search[role="dialog"]');
+          if (searchDialog && !searchDialog.hasAttribute('aria-label')) {
+            searchDialog.setAttribute('aria-label', 'Search');
+          }
+          const versionButton = document.querySelector('.md-version__current');
+          if (versionButton) {
+            const version = versionButton.textContent.trim();
+            if (version) {
+              versionButton.setAttribute('aria-label', 'Select version ' + version);
+            }
+          }
           document.addEventListener('click', function(event) {
             const resourcesList = document.getElementById('resources-list');
             const productsList = document.getElementById('products-list');
@@ -285,7 +296,7 @@
             display: none;
           }
         </style>
-        <a href="https://github.com/roboflow/trackers"><li class="header-btn" style="border-radius: 5px; color: white; background: var(--md-typeset-a-color); padding-top: 0.25rem; padding-left: 0.5rem; padding-bottom: 0.25rem; padding-right: 0.5rem; border: 1px solid #8315F9;">Go to GitHub</li></a>
+        <li><a href="https://github.com/roboflow/trackers" class="header-btn" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 5px; color: white; background: var(--md-typeset-a-color); padding: 0.25rem 0.5rem; border: 1px solid #8315F9;">Go to GitHub</a></li>
     </ul>
   </nav>
 
@@ -311,7 +322,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/latest/develop/." class="md-tabs__link">
+        <a href="/latest/." class="md-tabs__link">
           
   
   
@@ -331,11 +342,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="/latest/develop/learn/install/" class="md-tabs__link">
+        <a href="/latest/guides/install/" class="md-tabs__link">
           
   
   
-  Guides
+  Usage
 
         </a>
       </li>
@@ -351,7 +362,67 @@
     
     
       <li class="md-tabs__item">
-        <a href="/latest/develop/trackers/comparison/" class="md-tabs__link">
+        <a href="/latest/guides/dynamic-frame-rate/" class="md-tabs__link">
+          
+  
+  
+  Tuning
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/latest/guides/inspect/" class="md-tabs__link">
+          
+  
+  
+  Developer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/latest/evaluations/download/" class="md-tabs__link">
+          
+  
+  
+  Evaluations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/latest/trackers/sort/" class="md-tabs__link">
           
   
   
@@ -371,11 +442,31 @@
     
     
       <li class="md-tabs__item">
-        <a href="/latest/develop/api/trackers/" class="md-tabs__link">
+        <a href="/latest/api/trackers/" class="md-tabs__link">
           
   
   
   API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/latest/contributing/" class="md-tabs__link">
+          
+  
+  
+  Community
 
         </a>
       </li>
@@ -405,9 +496,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/latest/develop/." title="Trackers" class="md-nav__button md-logo" aria-label="Trackers" data-md-component="logo">
+    <a href="/latest/." title="Trackers" class="md-nav__button md-logo" aria-label="Trackers" data-md-component="logo">
       
-  <img src="/latest/develop/assets/logo-trackers-violet.svg" alt="logo">
+  <img src="/latest/assets/logo-trackers-violet.svg" alt="Trackers logo" width="218" height="198">
 
     </a>
     Trackers
@@ -486,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/." class="md-nav__link">
+      <a href="/latest/." class="md-nav__link">
         
   
   
@@ -494,6 +585,34 @@
     
   
     Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Details
   
 
     
@@ -544,7 +663,7 @@
   <span class="md-ellipsis">
     
   
-    Guides
+    Usage
   
 
     
@@ -560,7 +679,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Guides
+    Usage
   
 
           </label>
@@ -573,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/learn/install/" class="md-nav__link">
+      <a href="/latest/guides/install/" class="md-nav__link">
         
   
   
@@ -601,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/learn/track/" class="md-nav__link">
+      <a href="/latest/guides/track/" class="md-nav__link">
         
   
   
@@ -629,126 +748,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/learn/download/" class="md-nav__link">
+      <a href="/latest/guides/cli/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Download Datasets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/latest/develop/learn/evaluate/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Evaluate Trackers
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/latest/develop/learn/detection-quality/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Detection Quality Matters
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/latest/develop/learn/state-estimators/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    State Estimators
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/latest/develop/learn/about/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    About
+    CLI Reference
   
 
     
@@ -799,7 +806,7 @@
   <span class="md-ellipsis">
     
   
-    Trackers
+    Tuning
   
 
     
@@ -815,7 +822,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Trackers
+    Tuning
   
 
           </label>
@@ -828,14 +835,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/trackers/comparison/" class="md-nav__link">
+      <a href="/latest/guides/dynamic-frame-rate/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Comparison
+    Dynamic Frame Rate
   
 
     
@@ -856,14 +863,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/trackers/sort/" class="md-nav__link">
+      <a href="/latest/guides/detection-quality/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    SORT
+    Detection Quality Matters
   
 
     
@@ -884,14 +891,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/trackers/bytetrack/" class="md-nav__link">
+      <a href="/latest/guides/tune/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ByteTrack
+    Tune Trackers
   
 
     
@@ -912,14 +919,42 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/trackers/ocsort/" class="md-nav__link">
+      <a href="/latest/guides/iou/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    OC-SORT
+    IoU Variants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/guides/state-estimators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    State Estimators
   
 
     
@@ -970,7 +1005,7 @@
   <span class="md-ellipsis">
     
   
-    API Reference
+    Developer
   
 
     
@@ -983,6 +1018,519 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/guides/inspect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inspect Mask Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Evaluations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/evaluations/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/evaluations/evaluate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmark Trackers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/evaluations/benchmark-runner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmark Runner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/evaluations/results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/evaluations/methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Methodology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trackers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Trackers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/trackers/sort/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SORT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/trackers/bytetrack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ByteTrack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/trackers/ocsort/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OC-SORT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/trackers/botsort/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BoT-SORT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/trackers/cbiou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C-BIoU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/trackers/mcbyte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    McByte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -999,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/api/trackers/" class="md-nav__link">
+      <a href="/latest/api/trackers/" class="md-nav__link">
         
   
   
@@ -1027,7 +1575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/api/motion/" class="md-nav__link">
+      <a href="/latest/api/motion/" class="md-nav__link">
         
   
   
@@ -1055,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/api/datasets/" class="md-nav__link">
+      <a href="/latest/api/datasets/" class="md-nav__link">
         
   
   
@@ -1083,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/api/evals/" class="md-nav__link">
+      <a href="/latest/api/evals/" class="md-nav__link">
         
   
   
@@ -1111,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/develop/api/io/" class="md-nav__link">
+      <a href="/latest/api/io/" class="md-nav__link">
         
   
   
@@ -1119,6 +1667,205 @@
     
   
     I/O
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/guides/migration_cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration: CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Community
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/code-of-conduct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code of Conduct
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
   
 
     
@@ -1297,20 +2044,18 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/latest/develop", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.tracking", "navigation.expand", "navigation.tabs"], "search": "/latest/develop/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "/latest", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.tracking", "navigation.expand", "navigation.tabs"], "search": "/latest/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="/latest/develop/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="/latest/assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="/latest/develop/javascripts/pycon_copy.js"></script>
+        <script src="/latest/javascripts/pycon_copy.js"></script>
       
-        <script src="/latest/develop/javascripts/mathjax.js"></script>
+        <script src="/latest/javascripts/mathjax.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+        <script src="/latest/javascripts/cli_builder_framework.js"></script>
       
-        <script src="/latest/develop/javascripts/cli_builder_framework.js"></script>
-      
-        <script src="/latest/develop/javascripts/command_builder.js"></script>
+        <script src="/latest/javascripts/command_builder.js"></script>
       
     
   </body>
